@@ -6,5 +6,6 @@
 **Centro de procesos industriales CPIC**
 >SENA Regional-Caldas
 ---
-1-Layout
-2-JavaScript
+1.Layout
+
+2.JavaScript
