@@ -2,12 +2,14 @@
 /*google fonts poppins*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 body{
-    background-image:linear-gradient(45deg, rgba(10, 233, 28, 0.322), rgba(186, 6, 192, 0.808)), url(https://wallpapercave.com/wp/wp14038066.gif);
+  
     font-family: Poppins , serif;
     min-height: 100dvh;
     display: flex;
     justify-content: center;
     align-items: center;
+    
+    
 
     main{
         padding: 1rem;
@@ -74,7 +76,7 @@ body{
     }
 }
 
-menu{
+menu{               
                     align-items: center;
                     display: flex;
                     flex-direction: column;
@@ -82,24 +84,28 @@ menu{
                     justify-content: center;
                     padding: 0;
                     a:is(:link, :visited){
-                        border-radius: 5rem ;
+                        background: url(../img/mario-removebg-preview.png);
                         display: flex;
                         align-items: center;
-                        background-color: black;
                         color: aliceblue;
                         padding: 0.6rem;
                         width: 320px;
                         transition: all 0.4s;
+                        background-size:contain;
+                        background-size: 100% 100%;
+
 
                         &:is(:hover){
-                            background-color: aqua;
+                          
                             transform: scale(1.04)translateX(18px);
 
                         }
                        
                         span{
                             font-size: 1.8rem;
-                            background-color: crimson;
+                            background: url(https://c.tenor.com/KUNqaIRkkyIAAAAC/sta.gif) center;
+                            background-size: cover;
+                            color: red;
                             width: 60px;
                             display: flex;
                             justify-content: center;
@@ -107,10 +113,9 @@ menu{
                             border-radius: 50px;
                             height: 60px;
                             width: 60px; ;
+                            
                         }
-                         &:hover span{
-                            background-color: brown;
-                        }
+                       
                         aside{
                             margin-left: 0.6rem;
                             display: flex;
@@ -123,4 +128,22 @@ menu{
                             }
                         }
                     }
+                    .audio-global {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    background: rgba(0,0,0,0.8);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* Si quieres ocultar los controles pero que suene */
+.audio-global audio {
+    width: 200px;
+    /* o width: 0; height: 0; para ocultarlo */
+}
+                }
+                span{
+                    background: url(https://www.icegif.com/wp-content/uploads/2022/09/icegif-1027.gif);
                 }
