@@ -5,44 +5,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>01-layout</title>
     <link rel="stylesheet" href="src/css/master.css">
+    <style>
+        body{
+            background: url(src/img/animated-gifs-of-fighting-game-backgrounds-45.webp);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-repeat: no-repeat;
+            background-size:cover;
+            background-size: 100% 100%;
+            background-attachment: fixed;
+            
+            a:is(:link, :visited){
+                        background: url(####);
+                        background-color: rgba(240, 248, 255, 0.082);
+                        display: flex;
+                        align-items: center;
+                        color: aliceblue;
+                        padding: 0.6rem;
+                        width: 320px;
+                        transition: all 0.4s;
+                        background-size:contain;
+                        background-size: 100% 100%;
+
+
+                        &:is(:hover){
+                          
+                            transform: scale(1.04)translateX(18px);
+
+                        }
+                       
+                        span{
+                            font-size: 1.8rem;
+                            background: url(src/img/R.gif) center;
+                            background-size: cover;
+                            color: red;
+                            width: 60px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            border-radius: 50px;
+                            height: 60px;
+                            width: 60px; ;
+                            
+                        }
+            
+        }
+
+
+    </style>
 </head>
 <body class="mainmenu">
    <main>
     
     <header>
+        <a href="index.html">🏠</a>
         <h1>ADSO 3410390</h1>
         <img src="src/img/aefe331a-d141-4651-adae-7c91b9aa3d97.png" width="300" alt="my profile">
         <h2>Juan Lopez Garcia</h2>
         <h3>Analisis y desarrollo de sofware</h3>
         <h4> centro de procesos industriales</h4>
         <h5>Sena regional caldas</h5>
+
     </header>
     <menu>
 
-        <a href="index.html"> 
-            <span>01</span>
-            <aside>
-                <h3>return</h3>
-                <small>Go first page</small>
-            </aside>
+        
 
             <a href="wireframe-lo-fi.html">
-            <span>02</span>
+            <span>01</span>
             <aside>
                 <h3>wireframe Lo-fi</h3>
                 <small>zzzzz</small>
             </aside>
 
             <a href="wireframe-hiti.html">
-            <span>03</span>
+            <span>02</span>
             <aside>
-                <h3>wireframe-hiti</h3>
+                <h3>wireframe-hi-fi</h3>
                 <small>#####</small>
             </aside>
             </a>
             
             <a href="style-guide.html">
-            <span>04</span>
+            <span>03</span>
             <aside>
                 <h3>styleGuide</h3>
                 <small>#####</small>
@@ -50,7 +96,7 @@
             </a>
 
             <a href="mockup.html">
-            <span>05</span>
+            <span>04</span>
             <aside>
                 <h3>Mockup</h3>
                 <small>########</small>
