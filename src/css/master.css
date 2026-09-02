@@ -147,3 +147,20 @@ menu{
                 span{
                     background: url(https://www.icegif.com/wp-content/uploads/2022/09/icegif-1027.gif);
                 }
+                aside {
+                        margin-left: 0.6rem;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: start;
+                        h3 {
+                            margin: 0;
+                            font-size: 1.6rem;
+                            font-weight: 400;
+                        }
+                        small {
+                            color: #fff6;
+                            font-size: 0.8rem;
+                            font-weight: 300;
+                        }
+                    }
