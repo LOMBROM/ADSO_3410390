@@ -1,0 +1,679 @@
+:root {
+    --navy: #080e20;
+    --gold: #c9ad73;
+    --turquoise: #1c888c;
+    --black: #05090d;
+    --white: #f5f5f5;
+    --border-gold: #d5a64c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 65px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--black);
+    color: #080808;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+section {
+    scroll-margin-top: 55px;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* =========================
+   NAVEGACIÓN
+========================= */
+
+.navbar {
+    height: 72px;
+    background: var(--navy);
+    border-bottom: 3px solid #0789c4;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+    height: 100%;
+}
+
+.nav-link {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: var(--white);
+    font-size: 13px;
+    white-space: nowrap;
+    position: relative;
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #ffffff;
+}
+
+.nav-link.active::after {
+    content: "";
+    position: absolute;
+    bottom: 9px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #16b8d8;
+}
+
+.menu-toggle {
+    display: none;
+    color: white;
+    background: transparent;
+    border: 0;
+    font-size: 27px;
+    cursor: pointer;
+}
+
+/* =========================
+   PRÓXIMOS EVENTOS
+========================= */
+
+.events-section {
+    min-height: 390px;
+    background: var(--gold);
+    padding: 12px 5% 25px;
+}
+
+.events-section h2 {
+    margin-bottom: 30px;
+}
+
+.section-subtitle {
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 65px;
+}
+
+.events-container {
+    max-width: 1150px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+}
+
+.event-card {
+    flex: 1;
+    max-width: 240px;
+    min-width: 0;
+    text-align: center;
+}
+
+.event-image {
+    display: block;
+    padding: 5px;
+    background: #a77b31;
+    border: 2px solid #704b21;
+    border-radius: 13px;
+    overflow: hidden;
+    transition: transform 0.25s ease;
+}
+
+.event-image:hover {
+    transform: translateY(-5px);
+}
+
+.event-image img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 7px;
+}
+
+.event-card p {
+    font-size: 11px;
+    margin-top: 12px;
+}
+
+.event-decoration {
+    width: 105px;
+    flex-shrink: 0;
+}
+
+.event-decoration img {
+    width: 100%;
+    object-fit: contain;
+}
+
+/* =========================
+   RANGOS
+========================= */
+
+.ranks-section {
+    background: var(--turquoise);
+    padding: 20px 5% 45px;
+    min-height: 400px;
+}
+
+.ranks-section h2 {
+    margin-bottom: 65px;
+}
+
+.ranks-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.ranks-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex: 1;
+    gap: 25px;
+}
+
+.rank-card {
+    flex: 1;
+    min-width: 0;
+    text-align: center;
+    transition: transform 0.25s ease;
+}
+
+.rank-card:hover {
+    transform: scale(1.08);
+}
+
+.rank-card img {
+    width: 125px;
+    height: 135px;
+    margin: 0 auto 12px;
+    object-fit: contain;
+}
+
+.rank-card h3 {
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: lowercase;
+}
+
+.rank-arrow {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    border: 1px solid #075b64;
+    color: #063d45;
+    background: transparent;
+    font-size: 22px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.rank-arrow:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* =========================
+   META DE TEMPORADA
+========================= */
+
+.meta-section {
+    background: var(--gold);
+    padding: 15px 5% 40px;
+}
+
+.meta-section h2 {
+    margin-bottom: 18px;
+}
+
+.meta-toolbar {
+    max-width: 1100px;
+    margin: 0 auto 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.meta-toolbar > span {
+    font-size: 12px;
+    font-weight: bold;
+    margin-left: 35%;
+}
+
+.season-label select {
+    min-width: 170px;
+    padding: 5px 8px;
+    border: 1px solid #222;
+    background: #e7d4a8;
+    color: #111;
+    cursor: pointer;
+}
+
+.champions-container {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 55px;
+}
+
+.champion-card {
+    position: relative;
+    width: 100%;
+    max-width: 260px;
+    margin: 0 auto;
+    padding: 5px;
+    background: #9e742d;
+    border: 2px solid #6f4c1c;
+    border-radius: 14px;
+    overflow: hidden;
+    transition: transform 0.25s ease;
+}
+
+.champion-card:hover {
+    transform: translateY(-5px);
+}
+
+.champion-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.champion-card h3 {
+    position: absolute;
+    top: 10px;
+    left: 12px;
+    color: #fff;
+    font-size: 13px;
+    text-shadow: 1px 2px 4px #000;
+}
+
+.season-status {
+    text-align: center;
+    font-size: 12px;
+    margin-top: 15px;
+}
+
+/* =========================
+   MAPA Y ROLES
+========================= */
+
+.strategy-section {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    background: #03080b;
+    border-top: 2px solid #16818b;
+    border-bottom: 2px solid #16818b;
+    gap: 0;
+}
+
+.map-container {
+    padding: 8px;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--border-gold);
+    border-radius: 10px;
+    margin: 8px;
+}
+
+.map-container img {
+    width: 100%;
+    height: 100%;
+    max-height: 510px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.roles-container {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.role-card {
+    position: relative;
+    min-height: 150px;
+    overflow: hidden;
+    border-bottom: 2px solid #14818a;
+    background: #05090d;
+}
+
+.role-card img {
+    width: 100%;
+    height: 100%;
+    min-height: 150px;
+    position: absolute;
+    inset: 0;
+    object-fit: cover;
+    object-position: center;
+}
+
+.role-info {
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    color: white;
+    text-shadow: 1px 2px 5px black;
+}
+
+.role-info h3 {
+    font-size: 24px;
+}
+
+.role-info p {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* =========================
+   PIE DE PÁGINA
+========================= */
+
+.footer {
+    padding: 20px;
+    background: var(--navy);
+    color: #bdbdbd;
+    text-align: center;
+    font-size: 12px;
+}
+
+/* =========================
+   RESPONSIVE: TABLET
+========================= */
+
+@media (max-width: 900px) {
+    .navbar {
+        padding: 0 3%;
+    }
+
+    .nav-links {
+        gap: 20px;
+    }
+
+    .nav-link {
+        font-size: 11px;
+    }
+
+    .event-decoration {
+        width: 55px;
+    }
+
+    .ranks-container {
+        gap: 12px;
+    }
+
+    .rank-card img {
+        width: 100px;
+        height: 110px;
+    }
+
+    .rank-card h3 {
+        font-size: 17px;
+    }
+
+    .champions-container {
+        gap: 25px;
+    }
+
+    .meta-toolbar > span {
+        margin-left: 30%;
+    }
+
+    .strategy-section {
+        grid-template-columns: 42% 58%;
+    }
+}
+
+/* =========================
+   RESPONSIVE: MÓVIL
+========================= */
+
+@media (max-width: 600px) {
+    .navbar {
+        height: 60px;
+    }
+
+    .logo img {
+        width: 38px;
+        height: 38px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 57px;
+        left: 0;
+        right: 0;
+        height: auto;
+        padding: 12px 20px;
+
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+
+        background: var(--navy);
+        border-bottom: 2px solid #0789c4;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-link {
+        padding: 14px 5px;
+        height: auto;
+        font-size: 13px;
+    }
+
+    .nav-link.active::after {
+        bottom: 5px;
+        width: 45%;
+    }
+
+    .events-section {
+        min-height: auto;
+        padding: 18px 12px 28px;
+    }
+
+    .events-section h2 {
+        margin-bottom: 20px;
+    }
+
+    .section-subtitle {
+        margin-bottom: 25px;
+    }
+
+    .events-container {
+        gap: 10px;
+    }
+
+    .event-decoration {
+        display: none;
+    }
+
+    .event-card {
+        flex: 1;
+    }
+
+    .event-image {
+        padding: 3px;
+        border-radius: 8px;
+    }
+
+    .event-card p {
+        font-size: 9px;
+        line-height: 1.4;
+    }
+
+    .ranks-section {
+        padding: 20px 8px 30px;
+        min-height: auto;
+    }
+
+    .ranks-section h2 {
+        margin-bottom: 30px;
+    }
+
+    .ranks-wrapper {
+        gap: 4px;
+    }
+
+    .ranks-container {
+        overflow-x: auto;
+        justify-content: flex-start;
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+        gap: 16px;
+        padding: 8px 3px 15px;
+    }
+
+    .ranks-container::-webkit-scrollbar {
+        display: none;
+    }
+
+    .rank-card {
+        flex: 0 0 85px;
+    }
+
+    .rank-card img {
+        width: 80px;
+        height: 85px;
+    }
+
+    .rank-card h3 {
+        font-size: 14px;
+    }
+
+    .rank-arrow {
+        width: 28px;
+        height: 28px;
+        font-size: 16px;
+    }
+
+    .meta-section {
+        padding: 18px 12px 30px;
+    }
+
+    .meta-section h2 {
+        font-size: 15px;
+    }
+
+    .meta-toolbar {
+        margin-bottom: 25px;
+        gap: 10px;
+    }
+
+    .meta-toolbar > span {
+        margin-left: 0;
+        font-size: 10px;
+    }
+
+    .season-label select {
+        min-width: 120px;
+        max-width: 145px;
+        font-size: 10px;
+    }
+
+    .champions-container {
+        gap: 10px;
+    }
+
+    .champion-card {
+        padding: 3px;
+        border-radius: 8px;
+    }
+
+    .champion-card h3 {
+        top: 7px;
+        left: 6px;
+        font-size: 9px;
+    }
+
+    .strategy-section {
+        grid-template-columns: 1fr;
+    }
+
+    .map-container {
+        margin: 10px;
+        min-height: 250px;
+    }
+
+    .map-container img {
+        max-height: 400px;
+        aspect-ratio: 1 / 1;
+    }
+
+    .role-card,
+    .role-card img {
+        min-height: 120px;
+        max-height: 200px;
+        width: 140px;
+    }
+
+    .role-info {
+        left: 32%;
+        top: 20%;
+    }
+
+    .role-info h3 {
+        font-size: 20px;
+    }
+
+    .role-info p {
+        font-size: 13px;
+    }
+}

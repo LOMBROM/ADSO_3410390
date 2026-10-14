@@ -1,0 +1,41 @@
+/* Box sizing moderno */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Eliminar márgenes por defecto */
+* {
+  margin: 0;
+}
+
+/* Tipografía y fluidez de línea */
+html {
+  font-family: system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Altura mínima de la ventana usando svh/dvh */
+body {
+  min-height: 100dvh;
+}
+
+/* Ajuste de imágenes y elementos multimedia */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Heredar fuentes en elementos de formulario */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* Evita líneas viudas y mejora el equilibrio del texto */
+p, h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+span, li {
+  text-wrap: pretty;
+}

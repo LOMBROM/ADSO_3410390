@@ -1,0 +1,209 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#080e20">
+
+    <title>LoL | Dashboard</title>
+
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/app.js" defer></script>
+</head>
+
+<body>
+
+    <!-- BARRA DE NAVEGACIÓN -->
+    <header class="navbar">
+        <a href="#inicio" class="logo">
+            <img src="img/Ellipse 1.png" alt="Logo de League of Legends">
+        </a>
+
+        <button class="menu-toggle" id="menu-toggle"
+                aria-label="Abrir menú" aria-expanded="false">
+            ☰
+        </button>
+
+        <nav class="nav-links" id="nav-links">
+            <a href="#eventos" class="nav-link active">
+                Próximos eventos
+            </a>
+            <a href="#rangos" class="nav-link">Rangos</a>
+            <a href="#meta" class="nav-link">Meta de temporada</a>
+            <a href="#mapa" class="nav-link">MAP</a>
+        </nav>
+    </header>
+
+    <main id="inicio">
+
+        <!-- PRÓXIMOS EVENTOS -->
+        <section class="events-section" id="eventos">
+            <h2>LOL</h2>
+            <h3 class="section-subtitle">Próximos eventos</h3>
+
+            <div class="events-container">
+
+                <article class="event-card">
+                    <a href="#meta" class="event-image">
+                        <img src="img/1.png"
+                             alt="Liga Regional">
+                    </a>
+                    <p>Liga Regional Sur 2026 Split 2</p>
+                </article>
+
+                <div class="event-decoration" aria-hidden="true">
+                    <img src="img/image 2.png"  alt="">
+                </div>
+
+                <article class="event-card">
+                    <a href="#meta" class="event-image">
+                        <img src="img/3.png"
+                             alt="Evento Clausura">
+                    </a>
+                    <p>Clausura 4A</p>
+                </article>
+
+                <div class="event-decoration" aria-hidden="true">
+                    <img src="img/image 2.png" alt="">
+                </div>
+
+                <article class="event-card">
+                    <a href="#meta" class="event-image">
+                        <img src="img/2.png"
+                             alt="Nueva skin">
+                    </a>
+                    <p>NEW SKIN</p>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- RANGOS -->
+        <section class="ranks-section" id="rangos">
+            <h2>RANGOS</h2>
+
+            <div class="ranks-wrapper">
+                <button class="rank-arrow rank-prev"
+                        aria-label="Rangos anteriores">
+                    &#8592;
+                </button>
+
+                <div class="ranks-container" id="ranks-container">
+
+                    <article class="rank-card">
+                        <img src="img/image 4.png" alt="Insignia Bronce">
+                        <h3>bronce</h3>
+                    </article>
+
+                    <article class="rank-card">
+                        <img src="img/image 3.png" alt="Insignia Hierro">
+                        <h3>hierro</h3>
+                    </article>
+
+                    <article class="rank-card">
+                        <img src="img/image 5.png" alt="Insignia Plata">
+                        <h3>plata</h3>
+                    </article>
+
+                    <article class="rank-card">
+                        <img src="img/image 6.png" alt="Insignia Oro">
+                        <h3>oro</h3>
+                    </article>
+
+                    <article class="rank-card">
+                        <img src="img/image 7.png" alt="Insignia Platino">
+                        <h3>platino</h3>
+                    </article>
+
+                </div>
+
+                <button class="rank-arrow rank-next"
+                        aria-label="Siguientes rangos">
+                    &#8594;
+                </button>
+            </div>
+        </section>
+
+        <!-- META DE LA TEMPORADA -->
+        <section class="meta-section" id="meta">
+            <h2>META DE LA TEMPORADA</h2>
+
+            <div class="meta-toolbar">
+                <span>PERSONAJES</span>
+
+                <label for="season-select" class="season-label">
+                    <select id="season-select">
+                        <option value="TEMPORADA">TEMPORADA</option>
+                        <option value="SPLIT 1">SPLIT 1</option>
+                        <option value="SPLIT 2">SPLIT 2</option>
+                        <option value="SPLIT 3">SPLIT 3</option>
+                    </select>
+                </label>
+            </div>
+
+            <div class="champions-container">
+
+                <article class="champion-card">
+                    <img src="img/Rectangle 33.png" alt="Jinx">
+                    <h3>JINX</h3>
+                </article>
+
+                <article class="champion-card">
+                    <img src="img/Rectangle 34.png" alt="Hwei">
+                    <h3>AHRI</h3>
+                </article>
+
+                <article class="champion-card">
+                    <img src="img/Rectangle 35.png" alt="Yasuo">
+                    <h3>YASUO</h3>
+                </article>
+
+            </div>
+
+            <p class="season-status" id="season-status"
+               aria-live="polite"></p>
+        </section>
+
+        <!-- MAPA Y COMPOSICIONES -->
+        <section class="strategy-section" id="mapa">
+
+            <div class="map-container">
+                <img src="img/Group 17.png"
+                     alt="Mapa de la Grieta del Invocador">
+            </div>
+
+            <div class="roles-container">
+
+                <article class="role-card">
+                    <img src="img/image 9.png "width  alt="Campeón Darius">
+                    <div class="role-info">
+                        <h3>TOP</h3>
+                        <p>DARIUS</p>
+                    </div>
+                </article>
+
+                <article class="role-card">
+                    <img src="img/image 10.png" alt="Campeona Ahri">
+                    <div class="role-info">
+                        <h3>MID</h3>
+                        <p>AHRI</p>
+                    </div>
+                </article>
+
+                <article class="role-card">
+                    <img src="img/image 11.png" alt="Campeón ADC">
+                    <div class="role-info">
+                        <h3>BOT</h3>
+                        <p>ADC</p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    
+</body>
+</html>
